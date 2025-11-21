@@ -1,22 +1,22 @@
-import { Device, World, Emitter, Events } from "@oo/scripting"
+import { Device, World, Emitter, Events } from "@oo/scripting";
 
 export default class Game {
     constructor() {}
 
     async onPreload() {
-        console.log("Game: preload")
+        console.log("Game: preload");
         // ✅ Preload assets or setup references here
     }
 
     async onReady() {
-        console.log("Game: ready")
+        console.log("Game: ready");
 
         // ✅ Auto-start on mobile without needing pointer or tap logic
         if (Device.isMobile) {
-            console.log("Detected mobile — starting automatically")
-            World.start()
+            console.log("Detected mobile — starting automatically");
+            World.start();
         } else {
-            console.log("Desktop detected — waiting for UI or user input")
+            console.log("Desktop detected — waiting for UI or user input");
             // If you use DisplayManager, it’ll start via Display
         }
 
@@ -34,7 +34,7 @@ export default class Game {
     }
 
     async onStart() {
-        console.log("Game: start")
+        console.log("Game: start");
         // ✅ Add per-play logic here
     }
 
@@ -43,18 +43,18 @@ export default class Game {
     }
 
     async onPause() {
-        console.log("Game: pause")
+        console.log("Game: pause");
     }
 
     async onResume() {
-        console.log("Game: resume")
+        console.log("Game: resume");
     }
 
     async onEnd() {
-        console.log("Game: end")
+        console.log("Game: end");
     }
 
     async onDispose() {
-        console.log("Game: dispose")
+        console.log("Game: dispose");
     }
 }
